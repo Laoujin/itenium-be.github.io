@@ -88,10 +88,11 @@
 
 <script>
     $(window).on('scroll', function(){
-    if( $(window).scrollTop()>670 ){
-    $('.navbar-default').addClass('navbar-fixed-top');
-    } else {
-    $('.navbar-default').removeClass('navbar-fixed-top');
-    }
+        var sliderContainerHeight = $(".tp-banner-container").height();
+        if( $(window).scrollTop()>sliderContainerHeight+10){
+        $('.navbar-default').addClass('navbar-fixed-top');
+        } else {
+        $('.navbar-default').removeClass('navbar-fixed-top');
+        }
     });
 </script>
