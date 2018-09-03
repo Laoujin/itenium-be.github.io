@@ -7,15 +7,13 @@ permalink: /blog/
     {% include blog/big-header.html title="all blog posts" %}
     <section class="blog-sidebar">
         <div class="container">
+            {% include blog/search.html %}
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-8">
                     {% assign posts = site.posts | sort:"date" | reverse | slice: 0, 5 %}
                     {% for post in posts %}
                         {% include blog/entry-excerpt.html post=post %}
                     {% endfor %}
-
-
-
                 </div>
                 <div class="wow zoomIn col-xs-12 col-sm-12 col-md-4">
                     {% include blog/category-list.html %}
