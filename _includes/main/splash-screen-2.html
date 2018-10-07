@@ -92,4 +92,24 @@
         </a>
     </div>
     {% endif %}
+
+    {% if site.feature_flags.freelance_jobs %}
+    <div class="tp-caption lfr tp-resizeme"
+         data-x="right" data-hoffset="100"
+         data-y="bottom" data-voffset="-90"
+         data-speed="3000"
+         data-start="4000"
+         data-easing="Power3.easeOut"
+         data-splitin="none"
+         data-splitout="none"
+         data-elementdelay="0.05"
+         data-endelementdelay="0.1"
+         data-endspeed="500"
+         data-endeasing="Power4.easeIn"
+         style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;">
+        <a href="/freelance">
+            <button type="button" class="btn btn-default buy-btn">{{ splash.button2 }}</button>
+        </a>
+    </div>
+    {% endif %}
 </li>
